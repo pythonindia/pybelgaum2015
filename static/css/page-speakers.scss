@@ -1,0 +1,190 @@
+.page-speakers{
+	
+	&.section-speaker{
+		background:#fff; padding: 40px 0;
+		overflow: hidden;
+
+		a.social{
+			padding-left:30px; height:26px; line-height: 26px; margin-right:20px;
+			color: #1a675d;
+			@include inline-block; 
+			background-position: left center;
+			background-repeat: no-repeat;
+
+			&.twitter{
+				@include bg-image-2x("../images/twitter_small_icon", png, 22px, 26px);
+			}
+			&.github{
+				@include bg-image-2x("../images/github_small_icon", png, 22px, 26px);		
+			}
+		}
+
+		&.single {
+			.thumb{
+				float: left; width: 200px;
+			}
+			.details{
+				margin: 0 0 0 270px;
+				h2{
+					margin: 0;
+	                font-size: 28px; line-height: 28px; font-weight: bold;
+	                text-transform: uppercase; color: #00a992;
+	                // .role{
+	                // 	font-size: 14px; font-weight:normal; margin-left:10px;
+	                // 	text-transform: none; color: #9d9d9d; line-height:14px;
+	                // }
+				}
+				.designation{
+					font-size: 14px; text-transform: uppercase; color: #1a675d;
+					line-height: 16px;
+				}
+				.border-line{
+					background:#00a992;
+				}
+				p{
+					font-size: 16px; line-height: 24px; color: #00a992;
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		&.single.alt{
+			background:#E5F6F3;
+			.thumb{
+				float: right;
+			}
+			.details{
+				margin:0 270px 0 0;
+			}
+		}
+		&.other-speakers {
+			background:#E5F6F3;
+			.block-wrapper{
+				width:31%; margin-right:3.5%; float:left; padding-bottom:5px;
+
+				&:nth-last-child(2){
+					margin-right: 0;
+				}
+			}
+			.block{
+				// border:1px solid #00AA90;
+				// background:#fff;
+				margin-right:5px;	// To compensate for the width taken by box-shadow. Would get out of container otherwise
+				// @include box-shadow(5px 5px 0px 0, #80c3b9);
+				text-align: center;
+
+				.block-content{
+					position:relative; z-index:2; margin:20px 0 15px;
+				}
+
+				.thumb{
+					float: none; width:200px; overflow:hidden; margin:0 auto;
+				}
+
+				h3{
+					font-size:20px; line-height:20px; color: #00AA90; margin:10px 0 0;
+					text-align: center; text-transform: uppercase;
+					a{
+						color: #00AA90;
+					}
+				}
+
+				.work{
+					text-transform: uppercase; font-size: 12px;
+				}
+
+				a.social{
+					width:22px; margin:5px 5px 0; padding-left:0;
+				}
+			}
+			@include if-device(phone-tablet){
+				.block{
+					.bg{
+						background-size: auto 110px; height:110px;
+					}
+					.thumb{
+						width:150px;
+					}
+				}
+			}
+
+			@include if-device(small-tablet){
+				.block{
+					.bg{
+						background-size: auto 90px; height:90px;
+					}
+					.thumb{
+						width:120px;
+					}
+				}
+			}
+
+			@include if-device(phone) {
+				padding:20px 0;
+
+				h2{
+					font-size: 28px; padding-left:50px;
+					height:40px; line-height:40px;
+					background-size:auto 40px; margin-bottom:20px;
+				}
+
+				.block-wrapper{
+					width:auto; margin:0 0 10px; float:none; padding:0;
+				}
+				.block{
+					@include box-shadow(0px 0px 0px 0, #80c3b9);
+					margin-right:0;
+
+					.bg{
+						background-size: auto 80px; height:80px;
+					}
+
+					.thumb{
+						width:100px;
+					}
+				}
+			}
+		}
+	}
+	@include if-device(tablet){
+		&.section-speaker{
+			padding: 40px 0;
+			&.single {
+				.thumb{
+					width:200px;
+				}
+			}
+		}
+	}
+	@include if-device(phone){
+		&.section-speaker{
+			padding: 20px 0;
+			&.single {
+				.thumb{
+					float: none; width: 100px;
+					margin-bottom: 10px;
+				}
+				.details{
+					margin: 0;
+					h2{
+						font-size: 22px; line-height:22px;
+					}
+					.designation{
+						font-size: 12px; line-height: 16px; margin-top: 0px;
+					}
+					p{
+						font-size: 14px; line-height: 20px; margin:10px 0;
+					}
+				}
+			}
+			&.single.alt{
+				.thumb {
+					float: none;
+				}
+				.details{
+					margin: 0;
+				}
+			} 
+		}
+	}
+}

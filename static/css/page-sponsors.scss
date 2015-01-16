@@ -1,0 +1,83 @@
+.page-sponsors{
+
+    &.section-sponsors{
+        background:#fff; padding: 40px 0;
+        h2{
+            font-size: 36px; color:#414954; padding-left:70px; margin:0;
+            height:60px; line-height:60px;
+            background-repeat: no-repeat; background-position: left center;
+            @include if-device(phone-tablet) {
+                font-size: 28px; 
+            }
+            &#sponsors_gold{
+                @include bg-image-2x("../images/gold_icon", png, 52px, 60px);
+            }
+            &#sponsors_silver{
+                @include bg-image-2x("../images/silver_icon", png, 52px, 60px);
+            }
+            &#sponsors_bronze{
+                @include bg-image-2x("../images/bronze_icon", png, 52px, 60px);
+            }
+        }
+
+        .sponsor-item{
+            margin-top:40px;
+            padding-bottom: 20px;
+            .thumb{
+                float: left; width: 200px;
+                -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+                box-sizing: border-box; width:31%;
+                img{
+                   width: 100%; height:auto; border:1px solid #414954;
+                   background: #fff;
+                   @include box-shadow(5px 5px 0px 0, #6D7B8D);
+                }
+            }
+            .details{
+                margin: 0 0 0 38%;
+                h3{
+                    margin: 0;
+                    font-size: 28px; line-height: 28px; font-weight: bold;
+                    text-transform: uppercase;
+                    color: #414954;
+                }
+                .border-line{
+                    background:#414954;
+                }
+                p{
+                    font-size: 16px; line-height: 24px; color: #414954;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    &.alt{
+        background:#ECECED;
+    }
+    @include if-device(tablet){
+        &.section-sponsors{
+            padding: 40px 0;
+        }
+    }
+    @include if-device(phone){
+        &.section-sponsors{
+            padding: 20px 0;
+            .sponsor-item{
+                margin-top: 30px;
+                .thumb{
+                        float: none; width:150px;
+                        margin-bottom: 10px;
+                }
+                .details {
+                    margin: 20px 0 0 0;
+                    h3{
+                        font-size: 22px; line-height:22px;
+                    }
+                    p{
+                        font-size: 14px; line-height: 20px; margin:10px 0;
+                    }
+                }
+            }
+        }
+    }
+}

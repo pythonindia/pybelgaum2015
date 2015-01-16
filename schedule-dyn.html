@@ -1,0 +1,139 @@
+---
+layout: page
+title: Schedule
+---
+
+	<section class="page-heading schedule">
+		<div class="container">
+			<h1>Schedule</h1>
+		</div>
+	</section>
+
+	<section class="page-schedule">
+		<div class="workshop-block">
+			<div class="container">
+				<h2 id="schedule_workshop" class="schedule-workshop">
+					<span class="event-type">Workshop&nbsp;/</span>
+					<span class="date">26</span> <span class="month">September</span> /
+					<span class="day">Friday</span>
+				</h2>
+				<div class="schedule-wrapper">
+					<div class="block-time">
+						<h3>08:30<span>am</span></h3>
+
+						<div class="common-event">
+							Registrations & Breakfast
+						</div>
+
+						<div class="clr"></div>
+					</div>
+
+					<div class="block-time">
+						<h3>09:00<span>am</span></h3>
+
+						<div class="common-event">
+							Introductions
+						</div>
+
+						<div class="clr"></div>
+					</div>
+
+          {% for workshop in site.workshops %}
+            <div class="block-time">
+              <h3>{{ workshop.timeslot }}</h3>
+
+              <div class="events-list">
+                {% for proposal in workshop.proposals %}
+                <div class="event-item">
+                  <div class="audi">Audi {{ proposal.audi }}</div>
+                  <div class="details">
+                    <div class="title"><a href="{{ proposal.url }}">{{ proposal.title }}</a></div>
+                    <div class="speaker">{{ proposal.speaker }}</div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+                {% endfor %}
+              </div>
+              <div class="clr"></div>
+            </div>
+          {% endfor %}
+
+				</div>
+			</div>
+		</div>
+
+    <!-- Conference Day #1 -->
+    <div  id="schedule_conference"></div>
+    <div class="conference-block">
+      <div class="container">
+        <h2 class="schedule-conference">
+          <span class="event-type">Conference&nbsp;/</span>
+          <span class="date">27</span>
+          <span class="month"> September </span>/
+          <span class="day">Saturday</span>
+        </h2>
+        <div class="schedule-wrapper">
+
+          {% for timeslot in site.talks_day1 %}
+            <div class="block-time">
+              <h3>{{ timeslot[0] }}</h3>
+
+              <div class="events-list">
+                {% for talk in timeslot[1] %}
+                <div class="event-item">
+                  {% if talk.break != 1 %}
+                  <div class="audi">Audi {{ talk.audi }}</div>
+                  {% endif %}
+                  <div class="details">
+                    <div class="title"><a href="{{ talk.url }}">{{ talk.name }}</a></div>
+                    <div class="speaker">{{ talk.speaker }}</div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+                {% endfor %}
+              </div>
+              <div class="clr"></div>
+            </div>
+          {% endfor %}
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Conference Day #2 -->
+		<div  id="schedule_conference"></div>
+		<div class="workshop-block">
+			<div class="container">
+				<h2 class="schedule-conference">
+					<span class="event-type">Conference&nbsp;/</span>
+					<span class="date">28</span>
+					<span class="month"> September </span>/
+					<span class="day">Sunday</span>
+				</h2>
+				<div class="schedule-wrapper">
+					{% for timeslot in site.talks_day2 %}
+            <div class="block-time">
+              <h3>{{ timeslot[0] }}</h3>
+
+              <div class="events-list">
+                {% for talk in timeslot[1] %}
+                <div class="event-item">
+                  {% if talk.break != 1 %}
+                  <div class="audi">Audi {{ talk.audi }}</div>
+                  {% endif %}
+                  <div class="details">
+                    <div class="title"><a href="{{ talk.url }}">{{ talk.name }}</a></div>
+                    <div class="speaker">{{ talk.speaker }}</div>
+                  </div>
+                  <div class="clr"></div>
+                </div>
+                {% endfor %}
+              </div>
+              <div class="clr"></div>
+            </div>
+          {% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>

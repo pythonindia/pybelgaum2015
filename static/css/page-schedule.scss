@@ -1,0 +1,141 @@
+.page-schedule{
+    .workshop-block{
+        padding-top: 40px;
+    }
+    .conference-block{
+        background: #FFF3E2; padding: 40px 0 60px; margin-top: 40px;
+    }
+    h2{
+        font-size: 36px; color:#5E3301; margin:0; padding-left:70px; margin:0;
+        height:60px; line-height:60px;
+        .date{
+            color: #5E3301;
+        }
+        .month{
+            color:#F59425; 
+        }
+        .day{
+            color:#824402;
+        }
+        &.schedule-workshop{
+            background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/workshop_icon", png, 52px, 60px);
+        }
+        &.schedule-conference{
+            background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/conference_icon", png, 52px, 60px);
+        }
+    }
+    h3{
+        // For displaying time
+        float: left; font-size: 32px; line-height:32px; color:#F59425; margin:0;
+
+        span{
+            text-transform:uppercase; color: #5E3301;
+            font-size: 24px; line-height:24px; padding: 24px 0 0 2px;
+        }
+    }
+    .schedule-wrapper{
+        padding:10px 0 0;
+    }
+
+    .block-time{
+        margin-top: 30px; padding:30px 0 0;
+        border-top:2px solid #F59425;
+
+        .common-event{
+            font-size:22px; font-weight:bold; color:#F59425; float: right;
+            line-height: 22px; margin-top:5px; width: 70%;
+        }
+        .events-list{
+            float: right; width: 70%; margin-top:5px;
+
+            .event-item{
+                padding-bottom:20px;
+                border-bottom:1px solid #F59425; margin-bottom:20px;
+
+                &:last-of-type{
+                    border-bottom: none; margin-bottom: 0; padding-bottom:0;
+                }
+                .details{
+                    margin-right: 100px;
+                    .title{
+                        font-size:22px; font-weight:bold; color:#F59425; line-height: 26px;
+                        a{
+                            color:#F59425;
+                        }
+                    }
+                    .speaker{
+                        font-size: 16px; line-height:28px; color:#5E3301; margin:10px 0 0;
+                        font-weight: bold;
+                    }
+                }
+                .audi{
+                    float: right; font-size: 16px; line-height:24px; color:#5E3301;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    @include if-device(tablet){
+        h2 {
+            font-size: 32px;
+        }
+    }
+    @include if-device(small-tablet){
+        h2 {
+            font-size: 28px; line-height: 30px;
+            .event-type{
+                display: block;
+            }
+        }
+    }
+	@include if-device(phone){
+		.workshop-block{
+            padding-top: 20px;
+        }
+        .conference-block{
+            padding-top: 20px;
+        }
+        .schedule-wrapper{
+        	padding:0;
+        }
+        h2{
+            font-size: 18px; line-height:22px; margin:0; padding-left:50px;
+			height: 44px;
+            .event-type{
+                display: block;
+            }
+            &.schedule-workshop,
+            &.schedule-conference {
+                background-size:auto 40px;
+            }
+        }
+        h3{
+            font-size:24px; line-height:28px;
+            span{
+                font-size: 16px;
+            }
+        }
+        .block-time{
+            padding:20px 0 10px; margin-top:20px;
+            .common-event{
+                width: 100%; margin-top: 10px; margin-bottom: -10px; font-size: 16px;
+            }
+            .events-list{
+             width: auto; margin-top: 20px;
+                .event-item{
+                    .details{
+                        margin-right: 70px;
+                        .title{
+                            font-size: 16px; line-height: 20px;
+                        }
+                        .speaker {
+                            font-size: 14px; line-height: 18px; margin: 5px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

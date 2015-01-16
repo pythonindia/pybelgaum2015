@@ -1,0 +1,107 @@
+body{
+	font-family: $base-font-family;
+	background:#fff;
+	font-size:$base-font-size;
+	line-height: $base-line-height;
+	color:$base-text-color;
+	margin: 0; padding: 0;
+	border:none; outline: 0;
+	overflow-y:scroll;
+	min-height: 100%;
+}
+
+/** General *********************************/  
+p {
+	margin:25px 0; color: $base-text-color;
+	font-size: $p-font-size; line-height: $p-line-height; font-weight: normal;
+
+	@include if-device(phone) {
+		font-size: 14px; line-height: 22px; margin:20px 0;
+	}
+
+	&.bordered_text{
+		display: inline-block; border:1px solid $primary-border-color; 
+		padding: 6px 15px; margin: 25px 0;
+		@include border-radius(3px);
+
+		@include if-device(phone-tablet) {
+			margin-bottom:25px; line-height: 24px; padding: 10px;
+		}
+	}
+}
+
+@mixin heading_color($color) {
+	color: $color;
+	&:after,
+	span{
+		background: $color;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom:25px; color:#4d4d4d;
+	text-align: left; letter-spacing: normal;
+}
+
+h1 {
+	font-size:36px; line-height: 36px; font-weight: bold;
+}
+h2,h3 {
+	font-size:16px; line-height: 24px;
+}
+h3 { }
+h4 {
+	font-size: 16px; line-height: 26px;
+}
+h5 {font-size:12px;}
+h6 {font-size:10px;}
+
+@include if-device(phone-tablet) {
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom:25px;
+		span{
+			width:50%; max-width: 50px;
+		}
+	}
+	h1 {
+		font-size:26px; line-height: 26px; margin: 25px 0;
+	}
+}
+
+a{
+	color:#54BAE9;
+	text-decoration:none;
+
+	&:hover{
+		text-decoration:underline;
+	}
+}
+
+.text_al{ text-align: left;}
+.text_ar{ text-align: right;}
+.text_ac{ text-align: center;}
+
+.fl{float:left;}
+.fr{float:right;}
+.clr{clear:both;}
+.pad_10{padding: 10px;}
+.pad_15{padding: 15px;}
+.pad_20{padding: 20px;}
+
+.mar_10{margin: 10px;}
+.mar_15{margin: 15px;}
+.mar_20{margin: 15px;}
+.mar_top_5{margin-top: 5px;}
+.mar_top_10{margin-top: 10px;}
+.mar_top_15{margin-top: 15px;}
+.mar_top_20{margin-top: 20px;}
+.mar_top_25{margin-top: 25px !important;}
+.mar_btm_0{margin-bottom: 0px;}
+.mar_btm_5{margin-bottom: 5px;}
+.mar_btm_10{margin-bottom: 10px;}
+.mar_btm_15{margin-bottom: 15px;}
+.mar_btm_20{margin-bottom: 20px;}
+.mar_btm_25{margin-bottom: 25px;}
+.mar_btm_30{margin-bottom: 30px;}
+.mar_btm_40{margin-bottom: 40px;}
+.mar_auto{margin: 0 auto;}

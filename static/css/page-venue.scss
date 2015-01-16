@@ -1,0 +1,338 @@
+.section-map{
+	width:100%; border-bottom:20px solid #6799B5; position:relative;
+	background:#fff;
+
+	.map-wrapper{
+		height: 450px; position:relative; z-index:1; width:100%; top:0; left:0;
+	}
+
+	.map-overlay{
+		height: 450px; position:absolute; z-index:2; left:0;top:0;width:100%;
+
+		.venue-details{
+			width:500px;
+			position:absolute; z-index:3; left:0;top:50px;
+			background:#fff; border:1px solid #6799B5;
+			@include box-shadow(5px 5px 0px 0, #6799B5);
+
+			.bg{
+				height: 140px; width:100%;
+			}
+			.content{
+				padding:20px; padding-left:50px; color:#6799B5;
+				background-position: 20px 22px; background-repeat: no-repeat;
+				@include bg-image-2x("../images/icon_venue", png, 18px, 20px);
+
+				.name{
+					font-size: 24px; line-height:24px; font-weight:bold;
+				}
+				.border-line{
+					background:#6799B5;
+				}
+				.address{
+					font-size: 18px; line-height:24px; margin-top:5px;
+				}
+
+				a.btn-boxy.get-directions{
+					margin-top:15px;
+					font-size: 12px; padding:0 15px; height:32px; line-height:32px;
+					background:#fff; border:1px solid #6799B5; color:#6799B5;
+					@include box-shadow(3px 3px 0px 0, #6799B5);
+
+					&:hover{
+						background:#eff4f7;
+					}
+				}
+			}
+		}
+	}
+
+	&.home{
+		border-bottom:none;
+		.map-wrapper{
+			height:590px;	// Add 140 for section header
+		}
+		.map-overlay{
+			top:140px;
+		}
+		@include if-device(phone) {
+			.map-wrapper{
+				display: none;
+			}
+			.map-overlay{
+				top:0px;
+			}
+		}
+	}
+
+	@include if-device(phone-tablet) {
+		.map-overlay{
+			padding-left:5%;width:95%;
+
+			.venue-details{
+				width:400px; top:80px;
+
+				.bg{
+					height: 112px; background-size:400px 112px;
+				}
+				.content{
+					padding-left:40px;
+					background-size:auto 18px;
+					background-position:15px 20px;
+
+					.name{
+						font-size: 20px; line-height:20px;
+					}
+					.address{
+						font-size: 16px; line-height:20px; margin-top:5px;
+					}
+				}
+			}
+		}
+	}
+	@include if-device(phone) {
+		border-bottom:5px solid #6799B5;
+		.map-wrapper{
+			display: none;
+		}
+		.map-overlay{
+			height: auto; position:relative; width:100%;  padding-left: 0;
+
+			.container{
+				width:100%; padding:0;
+			}
+			.venue-details{
+				position:relative; top:0; width:auto;
+				border:none;
+				@include box-shadow(0px 0px 0px 0, #6799B5);
+
+				.bg{
+					height: auto;
+				}
+
+				.content{
+					padding:10px 5% 10px 35px;
+					background-size:auto 16px;
+					background-position:12px 12px;
+
+					.name{
+						font-size: 18px; line-height:20px;
+					}
+					.address{
+						font-size: 14px; line-height:18px;
+					}
+					a.btn-boxy.get-directions{
+						margin-top:10px;
+						font-size: 12px; padding:0 10px; height:24px; line-height:24px;
+						@include box-shadow(0px 0px 0px 0, #6799B5);
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-venue{
+
+	&.section-get-a-cab{
+		padding: 40px 0;
+		background:#fff;
+		h2{
+			font-size: 36px; color:#6799b5; margin:0; padding-left:70px;
+			background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/get_a_cab_icon", png, 53px, 60px);
+			height:60px; line-height:60px;
+		}
+		.list-wrapper{
+			.list-item{
+				margin: 35px 5% 0 0; 
+				float: left; width: 30%; height: 80px;
+				&:nth-of-type(3n+0){
+					margin-right:0;
+				}
+				h3{
+					font-size: 24px; line-height:30px; font-weight: bold; margin: 0;
+					a{
+						color: #6799b5;
+					}
+				}
+				.border-line{
+					background:#6799b5;
+				}
+				p{
+					font-size: 16px; line-height: 24px; color: #6799b5;
+					margin:5px 0 0;
+				}
+			}
+		}
+		@include if-device(tablet) {
+			.list-wrapper {
+				.list-item {
+					width: 30%; margin-right: 5%;
+					&:nth-of-type(3n+0){
+						margin-right:0;
+					}
+					&:nth-of-type(4n+0){
+						margin-right:5%;
+					}
+				}
+			}
+		}
+		@include if-device(small-tablet) {
+			.list-wrapper {
+				.list-item {
+					width: 45%; margin-right: 10%;
+					&:nth-of-type(2n+0){
+						margin-right:0;
+					}
+					&:nth-of-type(3n+0){
+						margin-right:10%;
+					}
+					&:nth-of-type(4n+0){
+						margin-right:0%;
+					}
+				}
+			}
+		}
+
+		@include if-device(phone) {
+			padding: 20px 0;
+			
+			h2{
+				font-size: 28px; padding-left:50px;
+				height:40px; line-height:40px;
+				background-size:auto 40px;
+			}
+			.list-wrapper {
+				.list-item {
+					float: none; width: 100%; height: auto; margin-top: 20px; 
+					h3{
+						font-size: 20px; line-height:26px;
+					}
+					.border-line{
+						margin-top: 0;
+					}
+					p{
+						font-size: 14px; line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+	
+	&.section-nearby-hotels{
+		padding: 40px 0;
+		background:#EFF4F7;
+		h2{
+			font-size: 36px; color:#6799b5; margin:0; padding-left:70px;
+			background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/nearby_hotels_icon", png, 52px, 60px);
+			height:60px; line-height:60px;
+		}
+		.list-wrapper{
+			.list-item{
+				margin-top: 40px; height: 180px; overflow: hidden;
+				float: left; width: 30%; margin-right: 5%; 
+				&:nth-of-type(3n+0){
+					margin-right:0;
+				}
+				h3{
+					font-size: 24px; font-weight: bold; margin: 0;
+					a{
+						color: #6799b5;
+					}
+				}
+				.border-line{
+					background:#6799b5;
+				}
+				p{
+					font-size: 16px; line-height: 24px; color: #89B1C6;
+					margin:5px 0 0;
+				}
+				.contact-details{
+					font-size: 12px; line-height: 24px; color: #3D5B6B;
+					a{
+						color: #3D5B6B;
+					}
+				}
+				.website-details{
+					font-size: 14px; line-height: 18px; color: #3D5B6B;
+					a{
+						color: #3D5B6B;
+					}
+				}
+
+				.budget-label {
+					@include inline-block; margin-top: 5px;
+					padding:0 10px; line-height: 20px; height: 20px;
+					font-size: 12px; color:#fff;
+					&.budget{
+						background:#94B5C7;
+					}
+					&.delux{
+						background:#4864A3;
+					}
+					&.luxury{
+						background:#59D1AB;
+					}
+					&.super-luxury{
+						background:#617670;
+					}
+				}
+			}
+		}
+		@include if-device(tablet) {
+			.list-wrapper {
+				.list-item {
+					width: 30%; margin-right: 5%;
+					&:nth-of-type(3n+0){
+						margin-right:0;
+					}
+					&:nth-of-type(4n+0){
+						margin-right:5%;
+					}
+				}
+			}
+		}
+		@include if-device(small-tablet) {
+			.list-wrapper {
+				.list-item {
+					width: 45%; margin-right: 10%;
+					&:nth-of-type(2n+0){
+						margin-right:0;
+					}
+					&:nth-of-type(3n+0){
+						margin-right:10%;
+					}
+					&:nth-of-type(4n+0){
+						margin-right:0%;
+					}
+				}
+			}
+		}
+		@include if-device(phone) {
+			padding: 20px 0;
+
+			h2{
+				font-size: 28px; padding-left:50px;
+				height:40px; line-height:40px;
+				background-size:auto 40px;
+			}
+			.list-wrapper {
+				.list-item {
+					float: none; width: 100%; height: auto; margin-top: 20px; 
+					h3{
+						font-size: 20px; line-height:26px;
+					}
+					.border-line{
+						margin-top: 0;
+					}
+					p{
+						font-size: 14px; line-height: 20px;
+					}
+				}
+			}
+
+		}
+	}
+}

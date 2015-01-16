@@ -1,0 +1,83 @@
+
+/* computers */
+.visible-phone {
+  display: none !important;
+}
+
+.visible-tablet {
+  display: none !important;
+}
+
+.hidden-desktop {
+  display: none !important;
+}
+
+.visible-desktop {
+  display: inherit !important;
+}
+
+/* tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important ;
+  }
+  .visible-tablet {
+    display: inherit !important;
+  }
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+/* smartphones */
+@media (max-width: 767px) {
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+}
+
+
+@mixin at-least-width($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content 
+  }
+}
+
+@mixin until-width($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content 
+  }
+}
+
+@mixin if-device($point) {
+  @if $point == desktop {
+    @media screen and (min-width: 980px) { @content; }
+  }
+  @else if $point == tablet {
+    @media screen and (min-width: 600px) and (max-width: 959px) { @content; }
+  }
+  @else if $point == small-tablet {
+    @media screen and (min-width: 600px) and (max-width: 700px) { @content; }
+  }
+  @else if $point == phone-tablet {
+    @media screen and (max-width: 959px),
+    screen and (max-width: 959px) and (-webkit-min-device-pixel-ratio: 1.3) { @content; }
+  }
+  @else if $point == phone {
+    @media screen and (max-width: 600px),
+    screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.3)
+    	{ @content; }
+  }
+}

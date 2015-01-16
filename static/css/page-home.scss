@@ -1,0 +1,608 @@
+.page-home{
+
+	&.section-call{
+		$color_green:#00a992;
+		$color_orange:#ff6c6e;
+
+		padding:40px 0 50px;
+
+		.block-wrapper{
+			width:31%; margin-right:3.5%; float:left; padding-bottom:5px;
+
+			&:nth-last-child(2){
+				margin-right: 0;
+			}
+		}
+
+		.block,
+		.block.green{
+			border:1px solid $color_green; padding:20px; 
+			margin-right:5px;	// To compensate for the width taken by box-shadow. Would get out of container otherwise
+			@include box-shadow(5px 5px 0px 0, #00806d);
+
+			h3{
+				font-size:22px; line-height:22px; color: $color_green; margin-bottom:0;
+			}
+
+			p{
+				font-size: 16px; line-height:22px; color:$color_green;
+			}
+
+			h4{
+				font-size: 18px; color:$color_green; margin-bottom:0;
+			}
+
+			a.email{
+				color:$color_green; font-size:14px; line-height:14px;
+			}
+
+			.border-line.short{
+				margin: 0;
+			}
+
+			&.orange{
+				border-color:$color_orange;
+				@include box-shadow(5px 5px 0px 0, #d6595a);
+
+				h3,p,h4,a.email{
+					color: $color_orange;
+					&:after{
+						background:$color_orange;
+					}
+				}
+			}
+		}
+		@include if-device(small-tablet) {
+			.block-wrapper{
+				width:auto; margin:0 0 20px; float:none; padding:0;
+				&:nth-last-child(2){
+					margin-bottom: 0;
+				}
+			}
+		}
+		@include if-device(phone) {
+			padding:20px 0;
+
+			h2{
+				font-size: 28px; padding-left:50px;
+				height:40px; line-height:40px;
+				background-size:auto 40px; margin-bottom:20px;
+			}
+
+			.block-wrapper{
+				width:auto; margin:0 0 10px; float:none; padding:0;
+			}
+			.block,
+			.block.green,
+			.block.orange{
+				@include box-shadow(0px 0px 0px 0, #80c3b9);
+				margin-right:0;
+			}
+		}
+	}
+
+	&.section-speakers{
+		background:#00AA90; padding:40px 0 50px; 
+
+		a.btn-boxy.view-all{
+			float: right;
+			@include box-shadow(3px 3px 0px 0, #80c3b9);
+
+			&:hover{
+				background: #e5f6f3;
+			}
+			@include if-device(phone) {
+				@include box-shadow(0px 0px 0px 0, #019882);
+			}
+		}
+
+		h2{
+			font-size: 36px; color:#fff; margin-bottom:30px; padding-left:70px;
+			height:60px; line-height:60px;
+
+			background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/speakers_icon", png, 52px, 60px);
+		}
+
+		.block-wrapper{
+			width:31%; margin-right:3.5%; float:left; padding-bottom:5px;
+			&:nth-last-child(2){
+				margin-right: 0;
+			}
+		}
+
+		.block{
+			position:relative;
+			border:1px solid #00AA90;
+			background:#fff;
+			margin-right:5px;	// To compensate for the width taken by box-shadow. Would get out of container otherwise
+			@include box-shadow(5px 5px 0px 0, #80c3b9);
+			text-align: center;
+
+			.bg{
+				background:#006d5e repeat ;
+				@include bg-image-2x("../images/speaker_background_overlay", png, 319px, 129px);		
+				background-size: cover;
+				height:130px; width:100%; 
+				position:absolute; z-index:1;
+			}
+
+			.block-content{
+				position:relative; z-index:2; margin:20px 0 15px;
+			}
+
+			.thumb{
+				width:200px; overflow:hidden; margin:0 auto;
+			}
+
+			h3{
+				font-size:20px; line-height:20px; color: #00AA90; margin:10px 0 0;
+				text-align: center; text-transform: uppercase;
+				a{
+					color: #00AA90;
+				}
+			}
+
+			.work{
+				text-transform: uppercase; font-size: 12px;
+			}
+
+			a.social{
+				width:22px; height:26px; margin:5px 5px 0;
+				@include inline-block;
+
+				&.twitter{
+					background-repeat: no-repeat; background-position: center;
+					@include bg-image-2x("../images/twitter_small_icon", png, 22px, 26px);
+
+
+				}
+				&.github{
+					background-repeat: no-repeat; background-position: center;
+					@include bg-image-2x("../images/github_small_icon", png, 22px, 26px);
+				}
+			}
+		}
+
+		@include if-device(phone-tablet){
+			.block{
+				.bg{
+					background-size: auto 110px; height:110px;
+				}
+				.thumb{
+					width:150px;
+				}
+			}
+		}
+
+		@include if-device(small-tablet){
+			.block-wrapper{
+				width:auto; margin:0 0 20px; float:none; padding:0;
+				&:nth-last-child(2){
+					margin-right: 0;
+				}
+			}
+			.block{
+				.bg{
+					background-size: auto 90px; height:90px;
+				}
+				.thumb{
+					width:120px;
+				}
+			}
+		}
+
+		@include if-device(phone) {
+			padding:20px 0;
+
+			h2{
+				font-size: 28px; padding-left:50px;
+				height:40px; line-height:40px;
+				background-size:auto 40px; margin-bottom:20px;
+			}
+
+			.block-wrapper{
+				width:auto; margin:0 0 10px; float:none; padding:0;
+			}
+			.block{
+				@include box-shadow(0px 0px 0px 0, #80c3b9);
+				margin-right:0;
+
+				.bg{
+					background-size: auto 80px; height:80px;
+				}
+
+				.thumb{
+					width:100px;
+				}
+			}
+		}
+	}
+
+	&.section-schedule{
+		background-color: #fff3e2;
+		background-repeat: no-repeat; background-position: center bottom;
+		@include bg-image-2x("../images/Python_Speaker_Schedule", png, 306px, 591px);
+		padding:40px 0 0; min-height:620px;
+
+		h2{
+			font-size: 36px; color:#F9A530; margin:0; padding-left:70px;
+			height:60px; line-height:60px;
+
+			background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/icon_schedule", png, 52px, 60px);
+		}
+
+		.schedule-item{
+			margin-top: 60px; width:270px;
+			&.left{
+				float: left; text-align:left;
+			}
+			&.right{
+				float: right; text-align:right;
+				h3{
+					text-align: right;
+				}
+				.border-line{
+					float: right;
+				}
+			}
+			.border-line{
+				background-color: #F9A530;
+			}
+			h3{
+				font-size: 48px; line-height:50px; color:#5E3301; font-weight:bold; margin:0;
+			}
+
+			.date{
+				font-size: 32px; line-height:40px; color:#5D330B;
+				span{
+					color: #F59425;
+				}
+			}
+
+			.day{
+				font-size: 26px; line-height:32px; color:#824402;
+			}
+
+			.intro{
+				font-size: 18px; line-height:24px; color:#824402;
+				margin-top: 20px;
+			}
+
+			a.btn-boxy{
+				background:transparent; border:1px solid #72430B; color:#72430B;
+				background:#fff;
+				@include box-shadow(3px 3px 0px 0, #72430B);
+
+				&:hover{
+					background:#fff2e1;
+				}
+			}
+		}
+
+		@include if-device(phone-tablet) {
+			background-size: 200px auto;
+			min-height:500px;
+
+			.schedule-item{
+				margin-top: 40px; width:250px;
+				h3{
+					font-size: 40px; line-height:40px;
+				}
+				.date{
+					font-size: 28px; line-height:32px;
+				}
+				.day{
+					font-size: 24px; line-height:30px;
+				}
+			}
+		}
+		@include if-device(small-tablet){
+			background-size: 150px auto;
+			min-height:530px;
+			.schedule-item{
+				width: 220px;
+				h3{
+					font-size: 36px; line-height:40px;
+				}
+				.date{
+					font-size: 24px; line-height:32px;
+				}
+				.day{
+					font-size: 22px; line-height:30px;
+				}
+				a.btn-boxy{
+					padding: 0 15px; font-size: 14px;
+					line-height: 36px; height: 36px;
+				}
+			}	
+		}
+
+		@include if-device(phone) {
+			background-image: none; padding:20px 0;
+
+			h2{
+				font-size: 28px; padding-left:50px;
+				height:40px; line-height:40px;
+				background-size:auto 40px;
+			}
+
+			.schedule-item{
+				float: none!important; width:auto; margin-top: 40px;
+
+				&:first-of-type{
+					margin-top: 20px;
+				}
+
+				&.right{
+					text-align: left;
+					h3{
+						text-align: left;
+					}
+					.border-line{
+						float: none;
+					}
+				}
+
+				h3{
+					font-size: 28px; line-height:32px;
+				}
+				.date{
+					font-size: 24px; line-height:26px;
+				}
+
+				.day{
+					font-size: 22px; line-height:26px;
+				}
+				.intro{
+					font-size: 14px; line-height:18px; margin-top: 15px;
+				}
+				a.btn-boxy{
+					width:100%; text-align:center; padding:0;
+					@include box-shadow(0px 0px 0px 0, #72430B);
+					font-size: 14px; height:36px; line-height:36px;
+					margin-top:15px;
+				}
+			}
+		}
+	}
+
+	&.section-venue{
+
+		padding:0; position:relative;
+
+		a.btn-boxy.view-all{
+			float: right; border-color:#6799B5; color:#6799B5;
+			@include box-shadow(3px 3px 0px 0, #85b7d2);
+
+			&:hover{
+				background: #e6f6ff;
+			}
+			@include if-device(phone) {
+				@include box-shadow(0px 0px 0px 0, #019882);
+			}
+		}
+
+		h2{
+			font-size: 36px; color:#fff; margin:0 0 40px; padding-left:70px;
+			height:60px; line-height:60px;
+
+			background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/page_icon_venue", png, 52px, 60px);
+		}
+
+		.container-wrapper{
+			position:absolute; top:0; left:0; width:100%; z-index:5;
+			background:rgba(103,153,181,0.65); padding:40px 0 0;
+		}
+
+		@include if-device(phone) {
+
+			h2{
+				font-size: 28px; padding-left:50px; margin-bottom:0;
+				height:40px; line-height:40px;
+				background-size:auto 40px;
+			}
+
+			.container-wrapper{
+				position:relative; top:0; left:0; width:100%; z-index:5;
+				background:rgba(103,153,181,1); padding:20px 0;
+			}
+		}
+
+	}
+
+	&.section-sponsors{
+
+		background:#414954; padding:40px 0 50px;
+
+		a.btn-boxy.view-all{
+			float: right; border-color:#414954; color:#414954;
+			@include box-shadow(3px 3px 0px 0, #6D7B8D);
+
+			&:hover{
+				background: #efefef;
+			}
+			@include if-device(phone) {
+				@include box-shadow(0px 0px 0px 0, #6D7B8D);
+			}
+		}
+
+		h2{
+			font-size: 36px; color:#fff; margin:0 0 40px; padding-left:70px;
+			height:60px; line-height:60px;
+
+			background-repeat: no-repeat; background-position: left center;
+			@include bg-image-2x("../images/page_icon_sponsors", png, 52px, 60px);
+		}
+
+		h3{
+			color: #fff; font-size:28px; margin:30px 0 0;
+		}
+
+		.sponsors-wrapper{
+
+			.sponsor-item{
+				float: left; padding-right:5px; margin-top:20px;
+				-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+
+				&.gold{
+					width:31%; margin-right:3.5%;
+					&:nth-of-type(3n+0){
+						margin-right: 0;
+					}
+				}
+
+				&.silver,
+				&.bronze{
+					width:23%; margin-right:2.6%; 
+					&:nth-of-type(4n+0){
+						margin-right: 0;
+					}
+				}
+
+				img{
+					width: 100%; height:auto; border:1px solid #414954; background:#fff;
+					@include box-shadow(5px 5px 0px 0, #6D7B8D);
+				}
+			}
+		}
+
+		@include if-device(phone) {
+			padding:20px 0;
+
+			h2{
+				font-size: 28px; padding-left:50px; margin-bottom:20px;
+				height:40px; line-height:40px;
+				background-size:auto 40px;
+			}
+
+			h3{
+				font-size:24px; margin:20px 0 0;
+			}
+
+			.sponsors-wrapper{
+				.sponsor-item{
+					width:auto; padding-right:0; margin-top:15px;
+					&.gold{
+						width: 100%;
+					}
+					&.silver,
+					&.bronze {
+						width: 47%; margin-right: 3%;
+						&:nth-of-type(2n+0){
+							margin-right: 0;
+							margin-left: 3%;
+						}
+					}
+
+					img{
+						@include box-shadow(0px 0px 0px 0, #6D7B8D);
+					}
+				}
+
+			}
+		}
+	}
+
+	&.section-updates{
+		background:#fff; padding:40px 0 50px; 
+
+		h2{
+			font-size: 36px; margin-bottom:40px; 
+			background-repeat: no-repeat;
+			height:60px; line-height:60px;
+		}
+
+		.blog{
+			width:47%; float:left;
+			h2{
+				color: #4C657D; padding-left:70px;
+				background-repeat: no-repeat; background-position: left center;
+				@include bg-image-2x("../images/blog_icon", png, 52px, 60px);
+			}
+
+			.blog-wrapper{
+				border:1px solid #4C657D; padding:10px; height:420px; overflow-y: scroll;
+				@include box-shadow(5px 5px 0px 0, #4C657D); 
+
+				.post{
+					color: #3B5169; margin-bottom:15px; border-bottom:2px solid #4C657D;
+
+					&:last-child{
+						border-bottom:none; margin-bottom:0;
+					}
+
+					.title{
+						a{
+							color: #3B5169; font-size:18px; line-height:22px; font-weight:bold;
+						}
+					}
+					.date{
+						font-size: 12px;
+					}
+					.border-line{
+						background:#3B5169;
+					}
+					.text{
+						font-size: 13px; line-height:18px; margin:10px 0 15px;
+					}
+				}
+			}
+		}
+
+		.twitter{
+			width:47%; float:right;
+			h2{
+				color: #49B5DF; padding-right:70px; text-align:right;
+				background-repeat: no-repeat; background-position: right center;
+				@include bg-image-2x("../images/twitter_icon", png, 52px, 60px);
+			}
+
+			.twitter-wrapper{
+				border:1px solid #49B5DF; padding:0 10px 10px; height:430px;
+				@include box-shadow(5px 5px 0px 0, #49B5DF);
+			}
+		}
+			
+		@include if-device(phone) {
+
+			padding:20px 0;
+
+			h2{
+				font-size: 28px; padding-left:50px; margin-bottom:20px;
+				height:40px; line-height:40px;
+			}
+
+			.blog,
+			.twitter {
+				float: none;
+				width: auto;
+			}
+			.blog {
+				h2{
+					padding-left:50px; background-size:auto 40px;
+				}
+				.blog-wrapper{
+					height:auto; overflow-y: auto;
+					margin-bottom: 40px; 
+					@include box-shadow(0 0 0 0, #4C657D);
+				}
+			} 
+			.twitter {
+				h2 {
+					padding: 0 0 0 50px; text-align: left;
+					background-position: left center;
+					background-size:auto 40px;
+				}
+				.twitter-wrapper{
+					height:auto;
+					@include box-shadow(0 0 0 0, #49B5DF);
+				}
+
+			}
+		}
+	}
+
+}

@@ -1,0 +1,53 @@
+---
+layout: page
+---
+
+<section class="page-heading blog">
+    <div class="container">
+      <a href="{{ site.baseurl }}/blog/"><h1>Blog</h1></a>
+    </div>
+  </section>
+
+  <section class="page-blog">
+    <div class="container">
+      <div class="column-left">
+        <article class="post">
+          <h2><a href="{{ site.baseurl }}{{ page.url }}"> {{ page.title }}</a></h2>
+          <div class="published">
+            Published / {{ page.date | date_to_string }}
+          </div>
+          <div class="border-line blue"></div>
+          <div class="text">
+            {{ content }}
+          </div>
+          <!-- <a href="" class="comments">25 Comments</a> -->
+        </article>
+        <div>
+          <iframe src="//www.facebook.com/plugins/like.php?href=http://in.pycon.org{{ site.baseurl }}{{ page.url }}&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:135px;" allowTransparency="true"></iframe>
+
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="pyconindia" data-size="large" data-related="pyconindia" data-hashtags="pyconindia2014">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+          <script src="https://apis.google.com/js/plusone.js"></script>
+          <g:plus action="share" style="width:135px"></g:plus>
+
+        </div>
+        <hr>
+      </div>
+      <div class="column-right">
+        <h2>Recent Posts</h2>
+        <div class="border-line blue"></div>
+        <ul>
+          {% for post in site.posts %}
+            <li>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              <div class="published">
+                Published / {{ post.date | date_to_string }}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </section>

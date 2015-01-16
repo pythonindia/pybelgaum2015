@@ -1,0 +1,144 @@
+name: PyBelgaum 2015
+description: "Local Python conference in Belgaum, Karnataka"
+url: http://pybelgaum.org
+
+static_path: "/static"
+baseurl: "/"
+markdown: redcarpet
+pygments: true
+exclude: [Rakefile,README.md]
+
+workshops:
+- proposals:
+  - {comments: 1, confirmed: true, email: null, id: 154, level: Beginner, name: 154-learn-python-in-minutes,
+    phone: null, proposer: Kracekumar Ramaraju, section: Workshops, slides: '', speaker: Kracekumar
+      Ramaraju, submitted: '2014-05-02T20:21:44.741429Z', title: Learn python in minutes,
+    type: '', url: 'http://in.pycon.org/funnel/2014/154-learn-python-in-minutes',
+    votes: 9, votes_count: null, votes_groups: null, audi: 1}
+  - {comments: 4, confirmed: true, email: null, id: 115, level: Intermediate, name: 115-security-toolsmithing-writing-security-tools-in-python,
+    phone: null, proposer: Yashin Mehaboobe, section: Workshops, slides: '', speaker: Yashin
+      Mehaboobe, submitted: '2014-02-16T20:24:03.027692Z', title: 'Security Toolsmithing:
+      Writing security tools in Python', type: '', url: 'http://in.pycon.org/funnel/2014/115-security-toolsmithing-writing-security-tools-in-python',
+    votes: 13, votes_count: null, votes_groups: nul, audi: 2}
+  - {comments: 3, confirmed: true, email: null, id: 124, level: Intermediate, name: 124-scrape-anything-even-the-most-difficult-sites,
+    phone: null, proposer: Shashank Shekhar, section: Workshops, slides: '', speaker: Shashank
+      Shekhar, submitted: '2014-03-31T12:45:26.748623Z', title: Scrape Anything -
+      Even the most difficult sites, type: '', url: 'http://in.pycon.org/funnel/2014/124-scrape-anything-even-the-most-difficult-sites',
+    votes: 29, votes_count: null, votes_groups: nul, audi: 3}
+  timeslot: 09:30<span>AM</span>
+- proposals:
+  - {comments: 0, confirmed: true, email: null, id: 128, level: Beginner, name: 128-document-your-code,
+    phone: null, proposer: Kushal Das, section: Workshops, slides: '', speaker: Kushal
+      Das, submitted: '2014-04-03T17:49:31.039330Z', title: Document your code, type: '',
+    url: 'http://in.pycon.org/funnel/2014/128-document-your-code', votes: 15, votes_count: null,
+    votes_groups: null, audi: 1}
+  - {comments: 0, confirmed: true, email: null, id: 176, level: Beginner, name: 176-getting-started-with-django,
+    phone: null, proposer: Sivasubramaniam Arunachalam, section: Workshops, slides: '',
+    speaker: Sivasubramaniam Arunachalam, submitted: '2014-05-15T13:32:04.369370Z',
+    title: Getting Started with Django, type: '', url: 'http://in.pycon.org/funnel/2014/176-getting-started-with-django',
+    votes: 11, votes_count: null, votes_groups: null, audi: 2}
+  - {comments: 2, confirmed: true, email: null, id: 220, level: Beginner, name: 220-mobile-application-development-with-python-kivy,
+    phone: null, proposer: Akshay Arora, section: Workshops, slides: 'https://docs.google.com/presentation/d/1zoyqnnDqpXRPmZ1pLYu05cWMg-l9qt2657uGFozZWig',
+    speaker: Akshay Arora, submitted: '2014-05-29T14:50:33.206132Z', title: Mobile
+      Application development with python(kivy), type: '', url: 'http://in.pycon.org/funnel/2014/220-mobile-application-development-with-python-kivy',
+    votes: 10, votes_count: null, votes_groups: null, audi: 3}
+  timeslot: 01:00<span>PM</span>
+- proposals:
+  - {comments: 1, confirmed: true, email: null, id: 197, level: Intermediate, name: 197-decorators-demystified,
+    phone: null, proposer: Anand Chitipothu, section: Workshops, slides: '', speaker: Anand
+      Chitipothu, submitted: '2014-05-23T07:01:03.558671Z', title: Decorators demystified,
+    type: '', url: 'http://in.pycon.org/funnel/2014/197-decorators-demystified', votes: 20,
+    votes_count: null, votes_groups: null, audi: 1}
+  - {comments: 2, confirmed: true, email: null, id: 184, level: Beginner, name: 184-test-your-web-app-with-selenium,
+    phone: null, proposer: Anisha Narang, section: Workshops, slides: '', speaker: Anisha
+      Narang, submitted: '2014-05-18T12:07:24.719016Z', title: Test your web app with
+      Selenium, type: '', url: 'http://in.pycon.org/funnel/2014/184-test-your-web-app-with-selenium',
+    votes: 9, votes_count: null, votes_groups: null, audi: 2}
+  - {comments: 6, confirmed: true, email: null, id: 120, level: Beginner, name: 120-expeyes-python-powered-open-source-portable-science-lab,
+    phone: null, proposer: praveen patil, section: Workshops, slides: '', speaker: praveen
+      patil, submitted: '2014-03-11T12:20:04.925865Z', title: 'ExpEYES : Python Powered
+      Open Source Portable Science Lab', type: '', url: 'http://in.pycon.org/funnel/2014/120-expeyes-python-powered-open-source-portable-science-lab',
+    votes: 5, votes_count: null, votes_groups: null, audi: 3}
+  timeslot: 04:00<span>PM</span>
+
+
+talks_day1:
+  8.00 - 9.15:
+  - {break: 1, name: 'Breakfast & Registrations'}
+  9.15 - 9.30:
+  - {break: 1, name: 'Kenneth Award', url: '/2014/blog/nominations-open-for-the-kenneth-gonsalves-2014-award/'}
+  9.30 - 10.15:
+  - {audi: 1, name: 'Keynote 1', speaker: 'Kushal Das', url: '/2014/speakers.html'}
+  10.15 - 10.45:
+  - {break: 1, name: 'Tea Break'}
+  10.45 - 11.30:
+  - {audi: 1, name: 'Python, the eyes of real world computer applications', speaker: Ankush
+      Sharma, url: 'http://in.pycon.org/funnel/2014/208-python-the-eyes-of-real-world-computer-applications'}
+  - {audi: 2, name: 'Python + Spark: Lightning Fast Cluster Computing', speaker: Jyotiska
+      NK, url: 'http://in.pycon.org/funnel/2014/108-python-spark-lightning-fast-cluster-computing'}
+  11.30 - 12.15:
+  - {audi: 1, name: Django Design Patterns, speaker: Arun Ravindran, url: 'http://in.pycon.org/funnel/2014/227-django-design-patterns'}
+  - {audi: 2, name: Async Programming and Python, speaker: "Chetan Giridhar & Vishal Kanaujia", url: 'http://in.pycon.org/funnel/2014/230-async-programming-and-python'}
+  12.15 - 13.00:
+  - {audi: 1, name: Messing with government data using Python, speaker: Anand Chitipothu,
+    url: 'http://in.pycon.org/funnel/2014/207-messing-with-government-data-using-python'}
+  - {audi: 2, name: SHARQ - An API queueing system built at Plivo!, speaker: Sandeep
+      Raju, url: 'http://in.pycon.org/funnel/2014/245-sharq-an-api-queueing-system-built-at-plivo'}
+  13.00 - 14.00:
+  - {break: 1, name: 'Lunch'}
+  14.00 - 14.45:
+  - {audi: 1, name: 'Medusa: A much faster Python implementation based on the Dart
+      Virtual Machine', speaker: Rahul De, url: 'http://in.pycon.org/funnel/2014/130-medusa-a-much-faster-python-implementation-based-on-the-dart-virtual-machine'}
+  - {audi: 2, name: Auth as a service with Lastuser, speaker: Kiran Jonnalagadda, url: 'http://in.pycon.org/funnel/2014/255-auth-as-a-service-with-lastuser'}
+  14.45 - 15.30:
+  - {audi: 1, name: Transfer Pipeline at DreamWorks, speaker: Utkarsh Sinha, url: 'http://in.pycon.org/funnel/2014/224-transfer-pipeline-at-dreamworks'}
+  - {audi: 2, name: Meet ElasticSearch - My Pet Crunch Monster @Directi, speaker: Dhananjay
+      Sathe, url: 'http://in.pycon.org/funnel/2014/253-meet-elasticsearch-my-pet-crunch-monster-directi'}
+  15.30 - 16.00:
+  - {break: 1, name: 'Tea Break'}
+  16.00 - 16.45:
+  - {audi: 1, name: GPU accelerated high performance computing primer, speaker: Gurajapu
+      Raja Sumant, url: 'http://in.pycon.org/funnel/2014/158-gpu-accelerated-high-performance-computing-primer'}
+  - {audi: 2, name: 'Movie Screening - "The Internet''s Own Boy: The Story of Aaron Swartz"', speaker: '', url: 'https://mail.python.org/pipermail/inpycon/2014-July/008367.html'}
+  16.45 - 17.30:
+  - {audi: 1, name: 'Lightning Talks', speaker: '', url: ''}
+  - {audi: 2, name: 'Movie Screening - "The Internet''s Own Boy: The Story of Aaron Swartz"', speaker: '', url: 'https://mail.python.org/pipermail/inpycon/2014-July/008367.html'}
+
+talks_day2:
+  8.00 - 9.15:
+  - {break: 1, name: 'Breakfast & Registrations'}
+  9.30 - 10.15:
+  - {audi: 1, name: 'Keynote 2', speaker: 'Michael Foord', url: '/2014/speakers.html'}
+  10.15 - 10.45:
+  - {break: 1, name: 'Tea Break'}
+  10.45 - 11.30:
+  - {audi: 1, name: Async IO for Dummies, speaker: Vajrasky Kok, url: 'http://in.pycon.org/funnel/2014/186-asyncio-for-dummies'}
+  - {audi: 2, name: 'Introduction to BinPy - An Electronic Simulation Library',
+    speaker: 'Raghav R V', url: 'http://in.pycon.org/funnel/2014/157-introduction-to-binpy-an-electronic-simulation-library'}
+  11.30 - 12.15:
+  - {audi: 1, name: New Scientific Plotting in Python, speaker: "Ben Postlethwaite", url: 'http://in.pycon.org/funnel/2014/150-new-scientific-plotting-in-python'}
+  - {audi: 2, name: Building highly scalable web-services with Gevent - experiences
+      at Plivo, speaker: Aditya Manthramurthy, url: 'http://in.pycon.org/funnel/2014/248-building-highly-scalable-web-services-with-gevent-experiences-at-plivo'}
+  12.15 - 13.00:
+  - {audi: 1, name: Faster data processing in Python, speaker: Anand S, url: 'http://in.pycon.org/funnel/2014/165-faster-data-processing-in-python'}
+  - {audi:  2, name: "", speaker: "", url: ""}
+  13.00 - 14.00:
+  - {break: 1, name: 'Lunch'}
+  14.00 - 14.45:
+  - {audi: 1, name: 'Panel Discussion', speaker: '', url: ''}
+  14.45 - 15.30:
+  - {audi: 1, name: 'Python, Arduino and connected objects', speaker: Ankit Daftery,
+    url: 'http://in.pycon.org/funnel/2014/214-python-arduino-and-connected-objects'}
+  - {audi: 2, name: Development to Production, speaker: Anubhav Sinha, url: 'http://in.pycon.org/funnel/2014/132-development-to-production'}
+  15.30 - 16.00:
+  - {break: 1, name: 'Tea Break'}
+  16.00 - 16.45:
+  - {audi: 1, name: 'Which messaging layer should you use if you want to build a loosely
+      coupled distributed Python app?', speaker: Narahari Allamraju, url: 'http://in.pycon.org/funnel/2014/135-which-messaging-layer-should-you-use-if-you-want-to-build-a-loosely-coupled-distributed-python-app'}
+  - {audi: 2, name: Graph everything with Neo4J and Python, speaker: Sonal Raj, url: 'http://in.pycon.org/funnel/2014/252-graph-everything-with-neo4j-and-python'}
+  16.45 - 17.30:
+  - {break: 1, name: 'Lightning Talks'}
+  17.30 - 18.00:
+  - {audi: 1, name: 'Closing Ceremony and Feedback Collection', speaker: '', url: ''}
+  18.00 - 19.00:
+  - {audi: 1, name: 'Annual General Meeting (AGM) of Python Software Society of India', speaker: '', url: ''}

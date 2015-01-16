@@ -1,0 +1,31 @@
+---
+layout: page
+title: "Blog Posts"
+permalink: /blog/
+---
+
+<section class="page-heading blog">
+    <div class="container">
+      <h1>Blog</h1>
+    </div>
+  </section>
+
+  <section class="page-blog">
+    <div class="container">
+      <div class="column-left">
+      {% for post in site.posts %}
+        <article class="post">
+          <h2><a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }}</a></h2>
+          <div class="published">
+            Published / {{ post.date }}
+          </div>
+          <div class="border-line blue"></div>
+          <div class="text">
+            {{ post.excerpt }}
+          </div>
+        </article>
+      {% endfor %}
+      </div>
+      <div class="clr"></div>
+    </div>
+  </section>
