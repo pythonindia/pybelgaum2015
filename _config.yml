@@ -2,7 +2,7 @@ name: PyBelgaum 2015
 description: "Local Python conference in Belgaum, Karnataka"
 url: http://pybelgaum.org
 
-static_path: "/static"
+static_path: "static"
 baseurl: "/"
 markdown: redcarpet
 pygments: true
