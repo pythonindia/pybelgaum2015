@@ -26,4 +26,3 @@ How to write blog posts
  - Open the same file, write your blog post
  - Make sure you're running `jekyll serve -w` and watching for the changes and testing it on your browser before pushing
  - add, commit, push and send pull request
-=======
