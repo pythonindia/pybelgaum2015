@@ -1,73 +1,111 @@
 ---
 layout: default
 ---
-
-  <header class="main-header">
+<header class="main-header home">
     <div class="container">
-      <a href="{{ site.baseurl }}/" class="logo"><h1>PyBelgaum 2015, Belgaum, Karnataka</h1></a>
+      <a href="index.html" class="logo"><h1>PyBelgaum 2015, Belgaum, Karnataka</h1></a>
       <a class="mobile_icon"></a>
       <a href="https://www.instamojo.com/pssi/pybelgaum-2015/" target="_blank" class="btn-boxy buy-tickets">Buy Tickets</a>
       <nav class="top-navigation" role="navigation">
         <ul>
           <li class="speakers">
-            <a href="{{ site.baseurl }}/speakers.html">Speakers</a>
+            <a href="speakers.html">Speakers</a>
             <div class="border-line short"></div>
           </li>
           <li class="schedule">
-            <a href="{{ site.baseurl }}/schedule.html">Schedule</a>
+            <a href="schedule.html">Schedule</a>
             <div class="border-line short"></div>
           </li>
           <li class="venue">
-            <a href="{{ site.baseurl }}/venue.html">Venue</a>
+            <a href="venue.html">Venue</a>
             <div class="border-line short"></div>
           </li>
+
           <li class="sponsors">
-            <a href="{{ site.baseurl }}/sponsors.html">Sponsors</a>
+            <a href="{{ site.static_path }}/images/PyBelgaum_Sponsorship_Brochure.pdf" target="_blank">Brochure</a>
             <div class="border-line short"></div>
           </li>
           <li class="blog">
-            <a href="{{ site.baseurl }}/blog/">Blog</a>
+            <a href="sponsors.html">Sponsors</a>
             <div class="border-line short"></div>
           </li>
-          <li class="coc">
+          <!-- <li class="coc">
             <a href="{{site.baseurl}}/blog/pycon-india-code-of-conduct/">Code of Conduct</a>
             <div class="border-line short"></div>
           </li>
           <li class="blog">
             <a href="{{site.baseurl}}/blog/faq-frequently-asked-questions/">FAQ</a>
             <div class="border-line short"></div>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <div class="clr"></div>
     </div>
   </header>
-  <div class="header-fill-space"></div>
+
+  <div class="home-sticky-nav">
+    <div class="container">
+      <nav class="top-navigation">
+        <ul>
+          <li class="speakers">
+            <a href="speakers.html">Speakers</a>
+          </li>
+          <li class="schedule">
+            <a href="schedule.html">Schedule</a>
+          </li>
+          <li class="venue">
+            <a href="venue.html">Venue</a>
+          </li>
+          <li class="sponsors">
+            <a href="{{ site.static_path }}/images/PyBelgaum_Sponsorship_Brochure.pdf" target="_blank">Brochure</a>
+          </li>
+          <li class="sponsors">
+            <a href="sponsors.html">Sponsors</a>
+          </li>
+          <!-- <li class="blog">
+            <a href="#section_updates">Blog</a>
+          </li>
+          <li class="coc">
+            <a href="{{site.baseurl}}/blog/pycon-india-code-of-conduct/">Code of Conduct</a>
+          </li>
+          <li class="blog">
+            <a href="{{site.baseurl}}/blog/faq-frequently-asked-questions/">FAQ</a> -->
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <nav class="top-navigation-mobile">
     <ul>
       <li class="speakers active">
-        <a href="{{ site.baseurl }}/speakers.html">Speakers</a>
+        <a href="speakers.html">Speakers</a>
       </li>
       <li class="schedule">
-        <a href="{{ site.baseurl }}/schedule.html">Schedule</a>
+        <a href="schedule.html">Schedule</a>
       </li>
       <li class="venue">
-        <a href="{{ site.baseurl }}/venue.html">Venue</a>
+        <a href="venue.html">Venue</a>
       </li>
       <li class="sponsors">
-        <a href="{{ site.baseurl }}/sponsors.html">Sponsors</a>
+            <a href="{{ site.static_path }}/images/PyBelgaum_Sponsorship_Brochure.pdf" target="_blank">Brochure</a>
+            <div class="border-line short"></div>
+          </li>
+      <li class="sponsors">
+        <a href="sponsors.html">Sponsors</a>
       </li>
-      <li class="blog">
+      <!-- <li class="blog">
         <a href="{{ site.baseurl }}/blog/">Blog</a>
-      </li>
-      <li class="coc">
-        <a href="{{site.baseurl}}/blog/pycon-india-code-of-conduct/">Code of Conduct</a>
-      </li>
-      <li class="blog">
-        <a href="{{site.baseurl}}/blog/faq-frequently-asked-questions/">FAQ</a>
-      </li>
+      </li> -->
+      <!-- <li class="coc">
+        <a href="{{ site.baseurl }}/blog/pycon-india-code-of-conduct/">Code of Conduct</a>
+      </li> -->
+      <!-- <li class="blog">
+        <a href="{{ site.baseurl }}/blog/faq-frequently-asked-questions/">FAQ</a>
+      </li> -->
+
     </ul>
   </nav>
 
 {{ content }}
+
