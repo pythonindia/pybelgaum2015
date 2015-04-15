@@ -519,7 +519,7 @@ a.btn-boxy{
 			padding-top: 20px;padding-bottom: 20px; height:auto;
 			a{	
 				height: 20px;
-				@include bg-image-2x("../images/uncommon_black", png, 72px, 9px);
+				// @include bg-image-2x("../images/uncommon_black", png, 72px, 9px);
 			}
 		}
 	}
